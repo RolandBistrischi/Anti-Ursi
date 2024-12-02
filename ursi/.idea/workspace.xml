@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c5dc39b-f39e-495c-bcf4-0ec4354e4fdb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/PumpController.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activare_Pompa.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activare_Pompa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Detectie_Ursi_AI.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Detectie_Ursi_AI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1733072927461" duration="806000" />
       <workItem from="1733082039557" duration="804000" />
       <workItem from="1733133419980" duration="4694000" />
-      <workItem from="1733151779500" duration="2833000" />
+      <workItem from="1733151779500" duration="4865000" />
     </task>
     <servers />
   </component>
