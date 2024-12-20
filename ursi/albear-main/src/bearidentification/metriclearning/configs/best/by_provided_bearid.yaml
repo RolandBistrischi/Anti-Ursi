@@ -1,0 +1,67 @@
+batch_size: 32
+num_epochs: 200
+patience: 40
+data_augmentation:
+  colorjitter:
+    hue:
+      - -0.25
+      - 0.25
+    saturation:
+      - 0.6333333333333333
+      - 1.2333333333333334
+  rotation:
+    degrees: 16.666666666666668
+model:
+  trunk:
+    backbone: convnext_large
+    preprocessing:
+      values:
+        dtypes: float32
+        scale: true
+      crop_size: 224
+      normalization:
+        mean:
+          - 0.485
+          - 0.456
+          - 0.406
+        std:
+          - 0.229
+          - 0.224
+          - 0.225
+  embedder:
+    embedding_size: 512
+    hidden_layer_sizes:
+      - 2048
+loss:
+  type: arcfaceloss
+  config:
+    embedding_size: 512
+    num_classes: 132
+    margin: 41.03448275862069
+    scale: 128
+optimizers:
+  embedder:
+    type: adam
+    config:
+      lr: 7.196856730011513e-05
+      weight_decay: 0.0
+  trunk:
+    type: adam
+    config:
+      lr: 7.196856730011513e-05
+      weight_decay: 0.0
+  losses:
+    metric_loss:
+      type: adam
+      config:
+        lr: 0.0007196856730011522
+        weight_decay: 0.0
+miner:
+  type: batcheasyhardminer
+  config:
+    pos_strategy: hard
+    neg_strategy: hard
+sampler:
+  type: mperclass
+  config:
+    m: 4
